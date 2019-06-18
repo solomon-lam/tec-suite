@@ -88,7 +88,8 @@ def compose_navigation_re(system, epoch):
         SAT_SYS_GLO: 'g',
         SAT_SYS_GEO: 'h',
         SAT_SYS_GAL: 'l',
-        SAT_SYS_MIX: 'p'
+        SAT_SYS_MIX: 'p',
+		SAT_SYS_BDS: 'f'
     }
 
     classic_nav_tmpl = r'^(\w{{4}}){day}\w\.{year}{system}'

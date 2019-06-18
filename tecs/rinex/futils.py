@@ -47,7 +47,7 @@ NAME = 'tecs.rinex.futils'
 RE_VER = re.compile(r'^\s*(\d+\.?\d*).*RINEX VERSION / TYPE$', re.I)
 
 RE_MODERN_RINEX = re.compile(r'^(\w{4})\w{5}_[RSU]_(\d{4})(\d{3})\d{4}', re.I)
-RE_CLASSIC_RINEX = re.compile(r'^(\w{4})(\d{3})\w{1,3}\.(\d{2})([odnmglphbc])',
+RE_CLASSIC_RINEX = re.compile(r'^(\w{4})(\d{3})\w{1,3}\.(\d{2})([odnmgflphbc])',
                               re.I)
 
 ARCH = r'\.z|\.gz'
