@@ -39,6 +39,6 @@ if os.name == 'nt':
     finally:
         msg = '\nPress Enter key to close the window.'
         print(msg)
-        sys.stdin.readline()
+        #sys.stdin.readline()
 else:
     run()
