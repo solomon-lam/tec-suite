@@ -30,7 +30,7 @@ from __future__ import unicode_literals
 from builtins import map
 
 import logging
-
+from datetime import timedelta
 from tecs.rinex.basic import NavigationMessage, read_header, RinexError
 from tecs.rinex.common import validate_epoch, sec2sec_ms
 from tecs.rinex.header import RinexVersionType
@@ -121,10 +121,12 @@ class Nav2(NavigationMessage):
                                      epoch.date(),
                                      epoch.time())
                 logger.info(msg)
-
-                orbits = []
-                reader = None
-                continue
+                if self.date == epoch.date()+timedelta(days=1) or epoch.date()-timedelta(days=1):
+                    pass
+                else:
+                    orbits = []
+                    reader = None
+                    continue
 
             # message
             reader.message = self._read_orbits(orbits, vals_per_orbit)
