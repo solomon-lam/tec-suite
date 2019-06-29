@@ -104,16 +104,17 @@ class Text(object):
 
         year = epoch.strftime('%Y')
         yday = epoch.strftime('%j')
-
+        hour = epoch.strftime('%H')
+        min  = epoch.strftime('%M')
         if not self.path:
-            path = os.path.join(self.cfg.outDir, year, yday, marker)
+            path = os.path.join(self.cfg.outDir, year, yday,hour,min,marker)
             self.set_path(path)
 
             if not os.path.exists(self.path):
                 os.makedirs(self.path)
 
         # - the name
-        f_out = '%s_%s_%s_%s.%s' % (marker, sat, yday, year[2:], EXT)
+        f_out = '%s_%s_%s_%s_%s_%s.%s' % (marker, sat,min, hour,yday, year[2:], EXT)
         f_out = os.path.join(self.path, f_out)
 
         # new file
