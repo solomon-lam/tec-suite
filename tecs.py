@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# coding=utf8
+# coding=utf-8
 #
 # Copyright 2017 Ilya Zhivetiev <i.zhivetiev@gnss-lab.org>
 #
